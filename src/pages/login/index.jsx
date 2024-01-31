@@ -28,7 +28,7 @@ const Login = () => {
       <div className="mainContainer">
         <div className="logInContainer">
           <form onSubmit={logIn}>
-            <h1>sign up</h1>
+            <h1>log in</h1>
             <Input
               id="username"
               required={true}
