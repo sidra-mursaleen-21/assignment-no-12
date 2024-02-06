@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "../../components/input";
+import { useNavigate } from "react-router-dom";
 
 const Todo = () => {
   const [back, setBack] = useState(false);
@@ -8,6 +9,13 @@ const Todo = () => {
   const [todo, setTodo] = useState([]);
   const [modal, setModal] = useState(false);
   const [objectIndex, setobjectIndex] = useState();
+
+const navigation = useNavigate()
+
+const logOut = () => {
+  localStorage.removeItem("logIn");
+  navigation("/")
+}
 
   return (
     <>
@@ -105,6 +113,7 @@ const Todo = () => {
                 />
               </div>
               <div className="save">
+                <button onClick={()=>logOut()} >log out</button>
                 <button onClick={() => setBack(!back)}>all todoes</button>
                 <button
                   onClick={() => {

@@ -15,11 +15,10 @@ const Login = () => {
     e.preventDefault();
     const { username, password } = credentail;
     if (input.username === username && input.password === password) {
-      console.log("correct");
       localStorage.setItem("logIn", true);
       navigate("/home")
     } else {
-      console.log("wrong");
+      alert("wrong credential");
     }
   };
 

@@ -3,7 +3,6 @@ import { Navigate, Outlet } from "react-router-dom";
 
 const Home = () => {
   const login = localStorage.getItem("logIn");
-  console.log(login);
 
   return login ? (
     <>
